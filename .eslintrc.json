@@ -1,3 +1,9 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      { "singleQuote": true, "semi": true, "endOfLine": "auto" }
+    ]
+  }
 }
