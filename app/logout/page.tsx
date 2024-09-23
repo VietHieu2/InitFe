@@ -1,6 +1,6 @@
 'use client';
 
-import Loading from '@/common/Loading';
+import LoadingFullScreen from '@/components/common/LoadingFullScreen';
 import { getCookie, deleteCookie } from 'cookies-next';
 import React, { useEffect } from 'react';
 
@@ -23,13 +23,7 @@ const Logout = () => {
     handleLogout();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return (
-    <div className="relative h-screen w-full">
-      <div className="absolute left-1/2 top-1/2 z-[100] flex -translate-x-1/2 -translate-y-1/2 justify-center bg-white bg-opacity-50">
-        <Loading width="10" height="10" />
-      </div>
-    </div>
-  );
+  return <LoadingFullScreen />;
 };
 
 export default Logout;

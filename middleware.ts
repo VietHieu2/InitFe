@@ -49,6 +49,12 @@ export async function middleware(request: NextRequest) {
     if (!isSignIned) {
       return NextResponse.redirect(new URL(pathnameUrl.LOGIN, request.nextUrl));
     }
+    if (
+      isSignIned &&
+      (path === pathnameUrl.LOGIN || path === pathnameUrl.CALLBACK)
+    ) {
+      return NextResponse.redirect(new URL(pathnameUrl.HOME, request.nextUrl));
+    }
     return NextResponse.next();
   } catch (error) {
     return NextResponse.redirect(new URL('/error', request.nextUrl));

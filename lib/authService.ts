@@ -1,5 +1,5 @@
 import { ApiUrl } from '@/constants/api';
-import { AuthResponse } from '@/interface';
+import { AuthResponse } from '@/interface/apiResponse';
 import { httpRequest } from '@/utils/httpRequest';
 import { httpRequestRenewToken } from '@/utils/httpRequestRenewToken';
 

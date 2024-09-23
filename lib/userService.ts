@@ -1,5 +1,5 @@
 import { ApiUrl } from '@/constants/api';
-import { GetCurrentResponse, IUser } from '@/interface';
+import { GetCurrentResponse, IUser } from '@/interface/apiResponse';
 import { httpRequest } from '@/utils/httpRequest';
 import { httpRequestServer } from '@/utils/httpRequestServer';
 

@@ -1,5 +1,5 @@
 'use client';
-import Loading from '@/common/Loading';
+import LoadingFullScreen from '@/components/common/LoadingFullScreen';
 import { pathnameUrl } from '@/constants/pathname';
 import { authCallback } from '@/lib/authService';
 import { setCookie } from 'cookies-next';
@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 const Callback = () => {
   const searchParam = useSearchParams();
   const router = useRouter();
+
   const code = searchParam.get('code');
   useEffect(() => {
     const getCallback = async () => {
@@ -26,11 +27,7 @@ const Callback = () => {
     getCallback();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return (
-    <div>
-      <Loading />
-    </div>
-  );
+  return <LoadingFullScreen />;
 };
 
 export default Callback;
