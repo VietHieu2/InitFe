@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="flex h-screen max-h-screen">
-      <section className="remove-scrollbar container my-auto"></section>
+      <section className="remove-scrollbar container my-auto">Hello</section>
     </div>
   );
 }
